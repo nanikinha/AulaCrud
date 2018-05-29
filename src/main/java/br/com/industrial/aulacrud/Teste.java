@@ -24,7 +24,7 @@ public class Teste extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = 
-               DriverManager.getConnection("jdbc:mysql://localhost/mysql","root","");
+               DriverManager.getConnection("jdbc:mysql://localhost/mysql?useTimezone=true&serverTimezone=UTC","root","");
             if(con != null){
                 message = "STATUS--->Conectado com sucesso!";
                 con.close();
